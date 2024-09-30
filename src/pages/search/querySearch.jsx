@@ -72,11 +72,22 @@ export default function QuerySearch() {
   return (
     <Box h={"100%"} w={"100%"}>
       {Object.keys(result).length === 0 ? (
-        <Flex h={"100%"} w={"100%"} justify={"center"} align={"center"}>
+        <Flex
+          h={"100%"}
+          w={"100%"}
+          justify={"center"}
+          align={"center"}
+          direction={"column"}
+        >
+          <Text fz={30} fw={500} mt={"-xl"}>
+            Research begins here.
+          </Text>
           <TextInput
             onKeyDown={(e) => {
               if (e.key === "Enter") handleSearch(e.currentTarget.value);
             }}
+            mt={"sm"}
+            placeholder="Ask anything..."
             w={600}
             rightSection={
               loading ? <Loader size={"sm"} /> : <IconSend size={"1rem"} />
