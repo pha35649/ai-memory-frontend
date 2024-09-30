@@ -70,7 +70,7 @@ export default function MainHeader() {
 
   useEffect(() => {
     navigate("/query");
-  });
+  }, []);
 
   return (
     <header className=" border-b-[1px]">

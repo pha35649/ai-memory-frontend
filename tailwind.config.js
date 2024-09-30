@@ -2,7 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        custom: ["MyCustomFont", "sans-serif"], // Replace with your font's name
+      },
+    },
   },
   plugins: [],
 };
